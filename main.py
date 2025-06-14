@@ -13,7 +13,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "Hier kannst du deine tiefsten Gedanken, Geheimnisse, Sünden oder peinlichen Momente **völlig anonym** loswerden.  \n"
         "✍️ Schreib einfach direkt deine Beichte in den Chat.\n\n"
         "🔒 Keine Namen. Keine Spuren. Nur dein Geständnis.\n\n"
-         parse_mode='Markdown 
+         parse_mode='Markdown'
        )
 
 # ✍️ Beichte verarbeiten und weiterleiten
