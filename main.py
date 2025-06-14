@@ -9,12 +9,13 @@ ADMIN_GROUP_CHAT_ID = int(os.environ["ADMIN_GROUP_CHAT_ID"])
 # 👋 Begrüßungstext bei /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "*👋 Willkommen beim Beichtbot!*\n\n"
-        "Hier kannst du deine tiefsten Gedanken, Geheimnisse, Sünden oder peinlichen Momente **völlig anonym** loswerden.  \n"
-        "✍️ Schreib einfach direkt deine Beichte in den Chat.\n\n"
-        "🔒 Keine Namen. Keine Spuren. Nur dein Geständnis.\n\n"
-         parse_mode='Markdown'
-        )
+    "👋 Willkommen beim *Beichtbot!*\n\n"
+    "Hier kannst du deine tiefsten Gedanken, Geheimnisse, Sünden oder peinlichen Momente **völlig anonym** loswerden.\n"
+    "✍️ Schreib einfach direkt deine Beichte in den Chat.\n\n"
+    "🔒 Keine Namen. Keine Spuren. Nur dein Geständnis.\n\n"
+    "🙏 Danke für dein Vertrauen. Vielleicht erscheint deine Beichte bald im Kanal...",
+    parse_mode='Markdown'
+)
 
 # ✍️ Beichte verarbeiten und weiterleiten
 async def handle_beichte(update: Update, context: ContextTypes.DEFAULT_TYPE):
