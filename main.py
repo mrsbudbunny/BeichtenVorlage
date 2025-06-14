@@ -14,7 +14,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "✍️ Schreib einfach direkt deine Beichte in den Chat.\n\n"
         "🔒 Keine Namen. Keine Spuren. Nur dein Geständnis.\n\n"
          parse_mode='Markdown'
-       )
+        )
 
 # ✍️ Beichte verarbeiten und weiterleiten
 async def handle_beichte(update: Update, context: ContextTypes.DEFAULT_TYPE):
