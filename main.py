@@ -1,27 +1,6 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters, ContextTypes
 import os
-import json
-
-# Beicht-Zähler Datei
-STATS_FILE = "stats.json"
-
-# Funktion, um aktuelle Anzahl zu laden
-def load_stats():
-    try:
-        with open(STATS_FILE, "r") as f:
-            data = json.load(f)
-            return data.get("count", 0)
-    except FileNotFoundError:
-        return 0
-
-# Funktion, um Zähler zu speichern
-def save_stats(count):
-    with open(STATS_FILE, "w") as f:
-        json.dump({"count": count}, f)
-
-# Startwert laden
-beicht_count = load_stats()
 
 # 🔐 Holt den Token und die Admin-Gruppen-ID aus Railway (Umgebungsvariablen)
 BOT_TOKEN = os.environ["BOT_TOKEN"]
